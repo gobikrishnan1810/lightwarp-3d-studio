@@ -25,6 +25,20 @@ const values = [
   { t: "Story over spectacle", d: "Visuals that serve a brand truth, not effects for their own sake." },
 ];
 
+const team = [
+  { name: "Ava Coleman", role: "Creative Director", bio: "Directs creative and cinematic language across projects." },
+  { name: "Miguel Santos", role: "Lead Technical Artist", bio: "Builds shaders, pipelines and real-time tooling." },
+  { name: "Priya Nair", role: "Head of Animation", bio: "Leads character and motion teams for story-first animation." },
+  { name: "Jon Park", role: "Producer", bio: "Coordinates schedules, deliverables and client collaboration." },
+];
+
+const associates = [
+  { id: "vertex", name: "Vertex" },
+  { id: "aurora", name: "Aurora" },
+  { id: "northwind", name: "Northwind" },
+  { id: "strayer", name: "Strayer" },
+];
+
 function About() {
   return (
     <SiteShell>
@@ -72,6 +86,66 @@ function About() {
               <div className="text-primary font-display text-2xl">0{i + 1}</div>
               <h3 className="mt-4 text-2xl font-display">{v.t}</h3>
               <p className="mt-3 text-muted-foreground">{v.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* OUR STORY */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-display">Our story</h2>
+            <p className="mt-6 text-lg text-muted-foreground">Founded by filmmakers and engineers, Lightwarp grew from a simple idea: combine cinematic craft with real-time iteration. We spent years building tools and workflows, learning how to keep the soul of cinema while embracing the speed of interactive engines.</p>
+            <p className="mt-4 text-lg text-muted-foreground">Today we partner with brands and studios to produce work that launches products, tells stories, and creates memorable moments at scale.</p>
+          </div>
+          <div className="glass rounded-2xl p-8">
+            <h3 className="text-2xl font-display">Milestones</h3>
+            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <li>2018 — Studio founded, first short released</li>
+              <li>2020 — First real-time commercial pipeline deployed</li>
+              <li>2023 — Expanded to global clients and original IP</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* MEET OUR TEAM */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary mb-2">People</p>
+            <h2 className="text-4xl md:text-5xl font-display">Meet our team</h2>
+          </div>
+          <div className="hidden md:block text-sm text-muted-foreground">A small, multidisciplinary collective</div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {team.map((m) => (
+            <div key={m.name} className="team-card glass rounded-2xl p-6 text-center">
+              <div className="avatar mx-auto mb-4">{m.name.split(" ").map((n) => n[0]).slice(0,2).join("")}</div>
+              <div className="text-lg font-semibold">{m.name}</div>
+              <div className="text-sm text-muted-foreground">{m.role}</div>
+              <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* OUR ASSOCIATES */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary mb-2">Partners</p>
+            <h2 className="text-4xl md:text-5xl font-display">Our associates</h2>
+          </div>
+          <div className="hidden md:block text-sm text-muted-foreground">Collaborators and technology partners</div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-6 items-center">
+          {associates.map((a) => (
+            <div key={a.id} className="associate-logo glass rounded-xl p-6 flex items-center justify-center">
+              <div className="text-lg font-display">{a.name}</div>
             </div>
           ))}
         </div>

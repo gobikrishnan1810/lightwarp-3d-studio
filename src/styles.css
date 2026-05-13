@@ -181,3 +181,44 @@
 }
 .animate-float-up { animation: float-up 0.7s ease-out both; }
 .animate-flicker { animation: flicker 4s ease-in-out infinite; }
+
+/* Video gallery styles */
+.video-card { transition: transform 280ms cubic-bezier(.2,.9,.2,1), box-shadow 280ms; }
+.video-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: var(--shadow-glow); }
+.video-thumb { position: relative; height: 220px; background-size: cover; background-position: center; }
+.video-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.45)); }
+.play-circle { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 999px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: grid; place-items: center; box-shadow: var(--shadow-glow); opacity: 0.95; transition: transform 200ms; }
+.video-card:hover .play-circle { transform: translate(-50%, -50%) scale(1.06); }
+.premium-badge { background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); color: var(--primary-foreground); padding: 4px 8px; border-radius: 999px; font-weight: 600; font-size: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+
+/* Hero banner and awards beam */
+.hero-banner { overflow: hidden; }
+.banner-media video { height: 260px; width: 100%; object-fit: cover; border-radius: 12px; }
+.banner-beam { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.banner-beam::before { content: ""; position: absolute; left: -20%; top: 10%; width: 140%; height: 180%; transform-origin: 50% 0; background: conic-gradient(from 90deg at 50% 0%, transparent 0deg, var(--beam-pink) 6deg, var(--beam-blue) 12deg, transparent 22deg); filter: blur(10px); opacity: 0.18; animation: beam-sweep 6s ease-in-out infinite; }
+.banner-beam.small::before { opacity: 0.12; filter: blur(8px); animation-duration: 9s; }
+
+.awards-section { position: relative; }
+.award-card { transition: transform 220ms ease, box-shadow 220ms ease; }
+.award-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-glow-blue); }
+
+/* Projects - featured & capabilities */
+.featured-media { height: 420px; background: var(--card); }
+.featured-media video { height: 100%; width: 100%; object-fit: cover; display: block; }
+.capability-card { transition: transform 180ms ease, box-shadow 180ms ease; }
+.capability-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-glow); }
+
+/* Home hero background video */
+.hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: center; filter: saturate(1.03) contrast(1.02); }
+.hero-bg-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.5)); pointer-events: none; }
+
+
+/* About - team & associates */
+.team-card .avatar { width: 84px; height: 84px; border-radius: 999px; background: linear-gradient(135deg,var(--primary),var(--secondary)); color: var(--primary-foreground); display: grid; place-items: center; font-weight: 700; font-size: 20px; margin: 0 auto; box-shadow: var(--shadow-glow); }
+.team-card p { min-height: 48px; }
+.associate-logo { transition: transform 160ms ease, box-shadow 160ms ease; }
+.associate-logo:hover { transform: translateY(-6px); box-shadow: var(--shadow-glow); }
+
+
+
+

@@ -82,11 +82,49 @@ function Services() {
           </article>
         ))}
       </section>
+      {/* HOW WE DELIVER */}
+      <section className="mx-auto max-w-7xl px-6 pb-16">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary mb-3">Process</p>
+            <h2 className="text-5xl md:text-6xl font-display">How we deliver</h2>
+          </div>
+          <div className="hidden md:block text-sm text-muted-foreground">Transparent steps, predictable delivery</div>
+        </div>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24 text-center">
-        <Link to="/contact" className="inline-flex rounded-full px-8 py-3 bg-gradient-brand text-primary-foreground shadow-glow hover:scale-105 transition-transform">
-          Brief us on your project →
-        </Link>
+        <div className="grid md:grid-cols-4 gap-6">
+          <article className="glass rounded-3xl p-8 text-center">
+            <div className="text-3xl font-display text-primary">Discover</div>
+            <p className="mt-4 text-sm text-muted-foreground">We align on vision, scope and technical constraints to make a clear plan.</p>
+          </article>
+
+          <article className="glass rounded-3xl p-8 text-center">
+            <div className="text-3xl font-display text-primary">Prototype</div>
+            <p className="mt-4 text-sm text-muted-foreground">Rapid concepting and look-dev in real-time to validate creative direction.</p>
+          </article>
+
+          <article className="glass rounded-3xl p-8 text-center">
+            <div className="text-3xl font-display text-primary">Produce</div>
+            <p className="mt-4 text-sm text-muted-foreground">Full production, iteration cycles and quality control for final assets.</p>
+          </article>
+
+          <article className="glass rounded-3xl p-8 text-center">
+            <div className="text-3xl font-display text-primary">Deliver</div>
+            <p className="mt-4 text-sm text-muted-foreground">Delivery in the formats you need with documentation and handoff support.</p>
+          </article>
+        </div>
+      </section>
+
+      {/* READY TO GET STARTED CTA */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="relative overflow-hidden rounded-[2rem] p-12 md:p-20 text-center glass">
+          <div className="absolute inset-0 -z-10 bg-gradient-brand opacity-12" />
+          <h2 className="text-4xl md:text-6xl font-display max-w-3xl mx-auto">Ready to get started?</h2>
+          <p className="mt-6 text-muted-foreground max-w-xl mx-auto">Tell us about your timeline, scope and deliverables — we’ll propose a plan and estimate.</p>
+          <Link to="/contact" className="mt-10 inline-flex rounded-full px-8 py-3 bg-gradient-brand text-primary-foreground shadow-glow hover:scale-105 transition-transform">
+            Start the conversation →
+          </Link>
+        </div>
       </section>
     </SiteShell>
   );
