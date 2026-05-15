@@ -7,6 +7,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "postbuild": "node scripts/copy-redirects.js",
+    "deploy:cloudflare": "npm run build && echo \"Then run: npx wrangler publish --config dist/server/wrangler.json\"",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
